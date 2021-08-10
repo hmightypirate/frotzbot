@@ -1,0 +1,11 @@
+*pyc
+*~
+*#
+*flymake*
+data/*
+*.orig
+*.log
+out/
+*.list
+.vagrant
+.idea/*
