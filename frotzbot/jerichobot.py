@@ -71,7 +71,7 @@ class JerichoBot(Plugin):
         if len(re.findall(URL_REGEXP, action)) > 0:
             return
 
-        # discard non alphanumeric characters
+       # discard non alphanumeric characters
         action = re.sub(r'[^a-zA-Z0-9? ]', '', action)
         action = action.strip()
         
