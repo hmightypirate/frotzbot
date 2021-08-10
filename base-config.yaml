@@ -1,0 +1,22 @@
+# game to use in the bot
+game_path: games/mansion.z5
+
+# used languages in your chat rooms
+languages:
+ - es
+ - en
+
+# include here actions that must be accepted (by default non english actions will be filtered)
+accepted_actions:
+  - whisper
+  - inventory
+  
+# actions to discard always
+discarded_actions:
+  - hola
+  - vale
+  - ejem
+
+# list of keywords to reset the environment
+reset_command_list:
+  - reset
