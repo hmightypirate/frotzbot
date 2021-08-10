@@ -1,5 +1,5 @@
 maubot: 0.1.0
-id: com.example.examplebot
+id: com.example.frotzbot
 version: 1.0.0
 license: GPLv2
 modules:
