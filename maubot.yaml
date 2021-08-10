@@ -1,11 +1,10 @@
 maubot: 0.1.0
 id: com.example.examplebot
 version: 1.0.0
-license: MIT
+license: GPLv2
 modules:
   - frotzbot
 main_class: JerichoBot
 config: true
 extra_files: 
-  - games/mansion.z5
   - base-config.yaml
