@@ -14,6 +14,9 @@ from typing import Type, Tuple, Dict
 from mautrix.util.config import BaseProxyConfig, ConfigUpdateHelper
 
 
+URL_REGEXP = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -64,7 +67,12 @@ class JerichoBot(Plugin):
 
         logger.debug("Action {}".format(action))
 
-        # discard non alphanumeric characters
+
+        # discard actions that contains urls
+        if len(re.findall(URL_REGEXP, action)) > 0:
+            return
+
+       # discard non alphanumeric characters
         action = re.sub(r'[^a-zA-Z0-9? ]', '', action)
         action = action.strip()
         
